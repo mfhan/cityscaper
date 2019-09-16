@@ -9,11 +9,11 @@ const userController = require('./controllers/userController');
 const PORT = process.env.PORT || 3001;
 // define the initial variable
 const app = express();
-
 // set up middleware
 app.use(cors());
 app.use(bodyParser.json());
 app.use(logger('dev'));
+
 app.use('/tours', tourController);
 app.use('/locations', locationController);
 app.use('/auth', userController);
