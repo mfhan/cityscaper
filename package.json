@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/mfhan/cityscaper/issues"
   },
-  "homepage": "https://github.com/mfhan/cityscaper#readme"
+  "homepage": "https://github.com/mfhan/cityscaper#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^5.18.4"
+  }
 }
