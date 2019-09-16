@@ -39,10 +39,7 @@ User.init({
   modelName: 'user',
 });
 
-User.belongsToMany(Tour, { through: 'users_tours' });
-Tour.belongsToMany(User, { through: 'users_tours' });
 Tour.belongsToMany(Location, { through: 'tours_locations' });
-Location.belongsToMany(Tour, { through: 'tours_locations' });
 
 module.exports = {
   Tour,
