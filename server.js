@@ -14,8 +14,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(logger('dev'));
-app.use('/tours', tourController);
-app.use('/locations', locationController);
+// app.use('/tours', tourController);
+// app.use('/locations', locationController);
 //app.use('/auth', userController);
 //catch-all:
 app.use((e, req, res, next) =>{
