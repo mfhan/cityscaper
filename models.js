@@ -22,7 +22,7 @@ Location.init({
   name: Sequelize.STRING,
   description: Sequelize.TEXT,
   location: Sequelize.STRING,
-  image: Sequelize.STRING,
+  image: Sequelize.TEXT,
 }, {
   sequelize: db,
   modelName: 'location',
