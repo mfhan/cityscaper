@@ -28,18 +28,21 @@ Location.init({
   modelName: 'location',
 });
 
-class User extends Sequelize.Modle {}
+class User extends Sequelize.Model {}
 
 User.init({
   username: Sequelize.STRING,
+  email: Sequelize.STRING,
   password: Sequelize.STRING,
 }, {
   sequelize: db,
   modelName: 'user',
 });
 
-
+User.belongsToMany(Tour, { through: 'users_tours' });
+Tour.belongsToMany(User, { through: 'users_tours' });
 Tour.belongsToMany(Location, { through: 'tours_locations' });
+Location.belongsToMany(Tour, { through: 'tours_locations' });
 
 module.exports = {
   Tour,
