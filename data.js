@@ -38,17 +38,17 @@ const userdata = [
   {
     username:"ahollingworth",
     email:"andrew.hollingworth@gmail.com",
-    password_digest: "1234"
+    password: "1234"
   },
   {
     username:"mfhan",
     email:"mfhan@hotmail.com",
-    password_digest: "qwerty"
+    password: "qwerty"
   },
   {
     username:"drecheesecake",
     email:"drelovescheesecake@aol.com",
-    password_digest: "asdf"
+    password: "asdf"
   }
 ];
 
