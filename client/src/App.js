@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom'
+import { login, register } from './services/api-helper'
 import Signup from './components/Signup'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 class App extends Component{
   constructor(props) {
@@ -39,19 +42,27 @@ class App extends Component{
     }));
   }
 
-  handleSubmit = (e) => {
+  submitSignUp = async (e) => {
+    e.preventDefault();
+    const userData = register(this.state.register);
+  }
 
+  submitLogIn = async (e) => {
+    e.preventDefault();
+    const userData = login(this.state.login)
   }
 
   render() {
     return (
       <div className="App">
+        <Header />
         <h1>Welcome to City-Scaper!</h1>
         <Signup
           login={this.state.login}
           register={this.state.register}
           handleLoginChange={this.handleLoginChange}
           handleRegisterChange={this.handleRegisterChange}/>
+        <Footer />
       </div>
     );
   }
